@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "name": "moviespace"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tmdb.base-url",
+      "type": "java.lang.String",
+      "description": "TMDb base URL"
+    },
+    {
+      "name": "tmdb.api-key",
+      "type": "java.lang.String",
+      "description": "TMDb access api-key"
+    }
+  ],
+  "hints": []
+}

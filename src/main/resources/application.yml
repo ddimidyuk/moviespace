@@ -1,0 +1,3 @@
+tmdb:
+  base-url: ${tmdbBaseUrl}
+  api-key: ${tmdbApiKey}
