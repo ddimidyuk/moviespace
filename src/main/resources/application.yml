@@ -1,3 +1,4 @@
-tmdb:
-  base-url: ${tmdbBaseUrl}
-  api-key: ${tmdbApiKey}
+spring:
+  profiles:
+    group:
+      standalone: caffeine, h2
