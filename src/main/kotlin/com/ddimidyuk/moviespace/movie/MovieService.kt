@@ -1,11 +1,16 @@
 package com.ddimidyuk.moviespace.movie
 
-import com.ddimidyuk.moviespace.webclient.TMDbWebClient
-import org.springframework.stereotype.Service
+import com.ddimidyuk.moviespace.webclient.dto.MovieDTO
 
-@Service
-class MovieService(private val tmdbWebClient: TMDbWebClient) {
+interface MovieService {
 
-    fun getMovie(id: String, language: String) = tmdbWebClient.getMovie(id, language)
+    /**
+     * Returns a movie info.
+     *
+     * @param  id  TMDB movie id
+     * @param  language TMDb language param
+     * @return      the movie info
+     */
+    fun getMovieInfo(id: String, language: String): MovieDTO
 
 }

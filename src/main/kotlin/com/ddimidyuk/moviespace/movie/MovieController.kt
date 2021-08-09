@@ -1,19 +1,17 @@
 package com.ddimidyuk.moviespace.movie
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
+@RequestMapping("movie")
 class MovieController(
         private val service: MovieService
 ) {
 
-    @GetMapping("/movie/{movieId}")
+    @GetMapping("/{id}")
     fun getMovie(
-            @PathVariable(required = true) movieId: String,
+            @PathVariable(required = true) id: String,
             @RequestParam(required = true) language: String
-    ) = service.getMovie(movieId, language)
+    ) = service.getMovieInfo(id, language)
 
 }

@@ -12,7 +12,7 @@ class TMDbWebClient(private val tmdbProperties: TMDbProperties) {
             .baseUrl(tmdbProperties.baseUrl)
             .build()
 
-    fun getMovie(id: String, language: String): MovieDTO = webClient.get()
+    fun getMovieInfo(id: String, language: String): MovieDTO = webClient.get()
             .uri("/movie/$id") { uriBuilder ->
                 uriBuilder
                         .queryParam("api_key", tmdbProperties.apiKey)
