@@ -1,7 +1,0 @@
-tmdb:
-  base-url: ${tmdbBaseUrl}
-  api-key: ${tmdbApiKey}
-
-cache:
-  max-size: 100
-  expire-time-hours: 24

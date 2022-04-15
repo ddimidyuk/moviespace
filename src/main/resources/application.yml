@@ -1,4 +1,34 @@
 spring:
-  profiles:
-    group:
-      standalone: caffeine, h2
+  datasource:
+    url: jdbc:postgresql://${dbUrl}
+    username: ${dbUsername}
+    password: ${dbPassword}
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    property-naming-strategy: SNAKE_CASE
+  mail:
+    host: ${mailHost}
+    port: ${mailPort}
+    username: ${mailUsername}
+    password: ${mailPassword}
+#    templates:
+#      path: mail-template
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+tmdb:
+  base-url: ${tmdbBaseUrl}
+  api-key: ${tmdbApiKey}
+
+cache:
+  max-size: 100
+  expire-time-hours: 24

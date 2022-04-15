@@ -1,4 +1,4 @@
-package com.ddimidyuk.moviespace.cache
+package com.ddimidyuk.moviespace.config
 
 import com.github.benmanes.caffeine.cache.Caffeine
 import org.springframework.beans.factory.annotation.Value

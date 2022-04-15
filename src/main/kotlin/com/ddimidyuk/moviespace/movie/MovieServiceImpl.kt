@@ -14,7 +14,7 @@ class MovieServiceImpl(private val tmdbWebClient: TMDbWebClient): MovieService {
     @Cacheable("movies")
     override fun getMovieInfo(id: String, language: String): MovieDTO {
         logger.debug { "TMDb movie info id=$id request..." }
-        return tmdbWebClient.getMovieInfo(id, language)
+        return tmdbWebClient.getMovieInfo(id, language) ?: throw NullPointerException()
     }
 
 }
